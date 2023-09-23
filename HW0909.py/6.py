@@ -1,5 +1,5 @@
 n = float(input())
-y = float(int(n))
+y = int(n)
 if n - y == 0:
     print('int')
 else:
