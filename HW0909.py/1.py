@@ -1,5 +1,5 @@
-x = int(input())
-y = int(input())
+x = float(input())
+y = float(input())
 if x > y:
     print("первое больше второго")
 elif x < y:
