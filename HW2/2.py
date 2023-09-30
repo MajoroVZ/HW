@@ -1,3 +1,3 @@
-from itertools import *
-x = [str(a) for a in input().split()]
-print(max(list(permutations(x, r = len(x)))))
+x = [str(x) for x in input().split()]
+x = sorted(x, reverse = True)
+print(''.join(x))
