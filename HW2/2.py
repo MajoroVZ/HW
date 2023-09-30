@@ -1,3 +1,7 @@
-x = [str(x) for x in input().split()]
-x = sorted(x, reverse = True)
+x = []
+while True:
+  n = input()
+  x.append(n)
+  
+x.sort(reverse = True)
 print(''.join(x))
