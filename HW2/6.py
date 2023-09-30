@@ -1,7 +1,6 @@
 x = input()
 y = int(input())
 a = 0
-b = 0
 for i in x:
     if i.isdigit():
         a += 1
