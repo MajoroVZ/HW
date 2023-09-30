@@ -6,6 +6,5 @@ for i in x:
     if i.isdigit():
         a += 1
         if a == y:
-            b = i
+            print(y, "-ая цифра в строке:", i)
             break
-print(y, "-ая цифра в строке:", b)
