@@ -12,5 +12,5 @@ elif x == 0 and y == 0:
     print("Нулевая координата")
 elif y == 0:
     print("Ось абцисс")
-elif x == 0:
+else:
     print("Ось оординат")
