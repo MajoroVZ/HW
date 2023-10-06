@@ -1,5 +1,6 @@
 from random import randint
-x = randint(0,100)
+
+x = randint(0, 100)
 y = int(input())
 while y != x:
     if x < y:
