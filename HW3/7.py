@@ -15,4 +15,5 @@ def n(x):
             o = i
     return o
 x = [str(x) for x in input().split()]
-print(f(x), n(x))
+print("Самое часто встречаемое", f(x))
+print("Самое длинное", n(x))
