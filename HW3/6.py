@@ -4,6 +4,6 @@ def f(n):
         if n % i == 0:
             break
             return False
-    retutn True
+    return True
 print(f(n))
  
