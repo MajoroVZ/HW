@@ -3,9 +3,11 @@ def f(n):
     k = 1
     x = 0
     c = 0
-    for i in range(n):
+    lst = []
+    for i in range(1, n + 1):
         x = c + k
-        print(x, end=" ")
+        lst.append(x)
         c = k
         k = x
+    return lst
 print(f(n))
