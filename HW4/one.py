@@ -1,16 +1,18 @@
-y = int(input("На сколько сдвинуть список: "))
-x = input("Сам список: ")
-a = []
-def sdvig(x):
-    c = 0
+def f(x):
+    a = []
     while x:
         a.append(x)
-        x = input()
-    b = []
-    c = y % len(a)
-    for i in range(len(a)-c):
-        b.append(a[i+c])
-    for i in range(c):
-        b.append(a[i])
-    return b
-print(sdvig(x))
+        x = input("Сам список: ")
+    return a
+
+def sdvig(a, y):
+    y %= len(a)
+    return a[-y:] + a[:-y]
+
+if __name__ == "__main__":
+    y = int(input("На сколько сдвинуть список: "))
+    x = input("Сам список: ")
+    c = 0
+    a = f(x)
+    print(sdvig(a, y))
+
