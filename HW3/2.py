@@ -7,16 +7,8 @@ def vremi_goda(n):
         return "Лето"
     if n > 8 and n < 12:
         return "Осень"
-<<<<<<< HEAD
     return "Нет такого"
 
 
 n = int(input())
 print(vremi_goda(n))
-=======
-    return "Нет такого месяца"
-
-
-n = int(input())
-print(vremi_goda(n))
->>>>>>> 57865164e05a0ea86a08fb355faf78e68ed38826
