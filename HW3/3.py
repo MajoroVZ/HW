@@ -1,4 +1,6 @@
 n = int(input())
+
+
 def f(n):
     k = 1
     x = 0
