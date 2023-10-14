@@ -4,7 +4,7 @@ def fib(n):
     c2 = 1
     lst = []
     for i in range(n):
-        x = c + k
+        x = c1 + c2
         lst.append(x)
         c1 = c2
         c2 = x
