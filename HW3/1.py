@@ -1,6 +1,3 @@
-x = input()
-
-
 def f(x):
     a = []
     while x:
@@ -9,4 +6,5 @@ def f(x):
     return a
 
 
+x = input()
 print(f(x))
