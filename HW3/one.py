@@ -1,4 +1,4 @@
-def f(x):
+def input_list(x):
     a = []
     while x:
         a.append(x)
@@ -7,5 +7,5 @@ def f(x):
 
 
 x = input()
-print(f(x))
+print(input_list(x))
 
