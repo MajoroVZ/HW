@@ -1,13 +1,13 @@
 def fib(n):
-    k = 1
     x = 0
-    c = 0
+    c1 = 0
+    c2 = 1
     lst = []
     for i in range(n):
         x = c + k
         lst.append(x)
-        c = k
-        k = x
+        c1 = c2
+        c2 = x
     return lst
 
 
