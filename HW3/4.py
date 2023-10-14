@@ -2,8 +2,7 @@ from one import input_list
 from collections import Counter
 
 
-x = input()
-a = input_list(x)
+a = input_list()
 a = Counter(a)
 print("Элемент | Частота")
 for i in a:
