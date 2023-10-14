@@ -8,7 +8,7 @@ def vremi_goda(n):
     elif n > 8 and n < 12:
         return "Осень"
     else:
-        return "нет такого месяца
+        return "нет такого месяца"
 
 
 n = int(input())
