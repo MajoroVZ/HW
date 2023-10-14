@@ -9,7 +9,7 @@ def fib(n):
         c1 = c2
         c2 = x
     return lst
-
+    
 
 n = int(input())
 print(fib(n))
