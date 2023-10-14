@@ -25,12 +25,12 @@ print("Самое длинное", n(x))'''
 from collections import Counter
 
 
-def longest(t):
+def longest(lst):
     return max(t, key=len)
 
 
-def ct(t):
-    c = Counter(t)
+def ct(lst):
+    c = Counter(lst)
     return c.most_common(1)[0][0] 
 
 
