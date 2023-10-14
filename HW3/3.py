@@ -1,7 +1,4 @@
-n = int(input())
-
-
-def f(n):
+def fib(n):
     k = 1
     x = 0
     c = 0
@@ -14,4 +11,5 @@ def f(n):
     return lst
 
 
-print(f(n))
+n = int(input())
+print(fib(n))
