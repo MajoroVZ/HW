@@ -6,6 +6,8 @@ def f(x):
             m = x.count(i)
             k = i
     return k
+
+
 def n(x):
     mx = 0
     o = ''
@@ -14,6 +16,8 @@ def n(x):
             mx = len(i)
             o = i
     return o
+
+
 x = [str(x) for x in input().split()]
 print("Самое часто встречаемое", f(x))
 print("Самое длинное", n(x))
