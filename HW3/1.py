@@ -1,4 +1,6 @@
 x = input()
+
+
 def f(x):
     a = []
     while x:
