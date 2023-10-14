@@ -26,7 +26,7 @@ from collections import Counter
 
 
 def longest(lst):
-    return max(t, key=len)
+    return max(lst, key=len)
 
 
 def ct(lst):
