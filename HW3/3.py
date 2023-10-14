@@ -3,7 +3,7 @@ def fib(n):
     x = 0
     c = 0
     lst = []
-    for i in range(0, n):
+    for i in range(n):
         x = c + k
         lst.append(x)
         c = k
