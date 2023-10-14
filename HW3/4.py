@@ -1,6 +1,3 @@
-x = input()
-
-
 def f(x):
     a = []
     while x:
@@ -14,4 +11,5 @@ def f(x):
             lst.append(i)
 
 
+x = input()
 f(x)
