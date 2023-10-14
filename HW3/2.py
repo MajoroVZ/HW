@@ -1,4 +1,3 @@
-n = int(input())
 def vremi_goda(n):
     if (n > 0 and n < 3) or n == 12:
         return "Зима"
@@ -8,4 +7,8 @@ def vremi_goda(n):
         return "Лето"
     elif n > 8 and n < 12:
         return "Осень"
+    return "Нет такого"
+
+
+n = int(input())
 print(vremi_goda(n))

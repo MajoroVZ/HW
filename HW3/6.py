@@ -1,12 +1,9 @@
-n = int(input())
-
 def f(n):
-    t = True
-    for i in range(2,int(n**0.5)+1):
-        if n % i == 0:
-            t = False
-    return t
+    for i in range(2, int(n**0.5) + 1):
+        if not n % i:
+            return False
+    return True
 
 
+n = input()
 print(f(n))
- 

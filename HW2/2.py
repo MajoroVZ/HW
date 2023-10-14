@@ -1,7 +1,10 @@
-def max_n(n):
-    n.sort(key=lambda x: x*3, reverse=True)
-    mn = ''.join(n)
-    return int(mn)
-n = [n for n in input().split()]
-mn = max_n(n)
-print(mn)
+a = [a for a in input().split()]
+
+def mn(a):
+    m = len(max(a, key=len))
+    a.sort(key=lambda x: x * m, reverse=True)
+    r = int(''.join(a))
+    return r
+
+
+print(mn(a))

@@ -1,15 +1,9 @@
+def fib(n):
+    f = [0, 1, 1]
+    for _ in range(n - 2):
+        f.append(f[-2] + f[-1])
+    return f[:n]
+
+
 n = int(input())
-def f(n):
-    k = 1
-    x = 0
-    c = 0
-    lst = []
-    for i in range(1, n + 1):
-        x = c + k
-        lst.append(x)
-        c = k
-        k = x
-    return lst
-
-
-print(f(n))
+print(fib(n))
