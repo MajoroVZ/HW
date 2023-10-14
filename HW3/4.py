@@ -1,9 +1,9 @@
-from one import f
+from one import input_list
 from collections import Counter
 
 
 x = input()
-a = f(x)
+a = input_list(x)
 a = Counter(a)
 print("Элемент | Частота")
 for i in a:
