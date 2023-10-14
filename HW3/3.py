@@ -10,4 +10,6 @@ def f(n):
         c = k
         k = x
     return lst
+
+
 print(f(n))

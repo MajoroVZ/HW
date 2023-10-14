@@ -1,6 +1,7 @@
 x = input()
-a = []
+
 def f(x):
+    a = []
     while x:
         a.append(x)
         x = input()
@@ -10,4 +11,6 @@ def f(x):
         if i not in lst:
             print("{:7}".format(i),"|", a.count(i))
             lst.append(i)
-print(f(x))
+
+
+f(x)
