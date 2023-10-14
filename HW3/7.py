@@ -20,6 +20,7 @@ def n(x):
 
 x = [str(x) for x in input().split()]
 print("Самое часто встречаемое", f(x))
+<<<<<<< HEAD
 print("Самое длинное", n(x))'''
 from collections import Counter
 
@@ -37,3 +38,6 @@ lst = input("Введите список: ").split()
 
 print("Самое длинное слово:", longest(lst))
 print("Наиболее часто встречаемое слово:", ct(lst))
+=======
+print("Самое длинное", n(x))
+>>>>>>> 57865164e05a0ea86a08fb355faf78e68ed38826
