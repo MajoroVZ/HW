@@ -1,22 +1,18 @@
 def next_max_int(n):
     b = n
-    max = 0
-    min = 9
-    maxindex = 0
-    minindex = 0
-    for i in range(len(n)):
-        if int(n[i]) >= max:
-            max = int(n[i])
-            maxindex = i
-        if int(n[i]) <= min:
-            min = int(n[i])
-            minindex = i
+    k1, k2 = '', ''
+    i = len(n) - 1
+    while int(n[i]) <= int(n[i-1]):
+        i -= 1
+    else:
+        k1, k2 = n[i], n[i-1]
+        #n[i], n[i-1] = k2, k1
+        n = n.replace(n[i], k2, 1)
+        n = n.replace(n[i-1], k1, 1)
+    if n == b:
+        return -1
+    return n
 
-    for i in range(len(n)-1, -1, -1):
-        k = [i]
 
-        
-
-n = str(input())
+n = input()
 print(next_max_int(n))
-#1243
