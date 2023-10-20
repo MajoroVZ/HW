@@ -4,9 +4,8 @@ def next_max_int(n):
     while int(n[i]) <= int(n[i-1]):
         i -= 1
     k1, k2 = n[i], n[i-1]
-    #n[i], n[i-1] = k2, k1
-    n = n.replace(n[i], k2, 1)
-    n = n.replace(n[i-1], k1, 1)
+    n = n[:i] + k2 + n[i+1:]
+    n = n[:i-1] + k1 + n[i:]
     if n == b:
         return -1
     return n
