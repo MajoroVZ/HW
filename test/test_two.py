@@ -1,5 +1,15 @@
 from HW4.two import fac
-def test_fac():
-    assert fac(0) == 1
-    assert fac(1) == 1
-    assert fac(5) == 120
+import pytest
+
+
+@pytest.mark.parametrize(
+    ('x', 'result'),
+    [
+        (5, 120),
+        (3, 6),
+        (1, 1),
+        (0, 1)
+    ]
+)
+def test(x, result):
+    assert fac(x) == result

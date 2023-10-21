@@ -1,18 +1,8 @@
-def f(x):
-    a = []
-    while x:
-        a.append(x)
-        x = input("Сам список: ")
-    return a
+def s_list(a, n):
+    n %= len(a)
+    return a[-n:] + a[:-n]
 
-def sdvig(a, y):
-    y %= len(a)
-    return a[-y:] + a[:-y]
 
 if __name__ == "__main__":
-    y = int(input("На сколько сдвинуть список: "))
-    x = input("Сам список: ")
-    c = 0
-    a = f(x)
-    print(sdvig(a, y))
-
+    from one1 import input_list
+    print(s_list(input_list(), int(input("Введите число сдвига: "))))

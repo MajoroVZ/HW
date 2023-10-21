@@ -7,6 +7,3 @@ def fac(n):
 
 if __name__ == "__main__":
     print(fac(int(input())))
-
-
-
