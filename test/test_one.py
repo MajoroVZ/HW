@@ -1,6 +1,4 @@
-from HW4.one import s_list
-
-
+from HW.HW4.one import s_list
 import pytest
 
 

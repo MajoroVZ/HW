@@ -1,4 +1,4 @@
-from HW4.two import fac
+from HW.HW4.two import fac
 import pytest
 
 

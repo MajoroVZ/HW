@@ -1,4 +1,4 @@
-from HW4.three import uniq
+from HW.HW4.three import uniq
 import pytest
 
 
