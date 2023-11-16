@@ -5,7 +5,7 @@ def init_hash_table(capacity=100):
 
 
 def hash_key(key, capacity: int) -> int:
-    return (ord(key[ord(key[0]) % len(key)]) * ord(key[0]) % len(key)) % capacity
+    return (ord(key[ord(key[0]) % len(key)]) * (ord(key[ord(key[-1]) % len(key)]))) % capacity
 
 
 def set_value(hash_table, key: str, value):
@@ -49,45 +49,7 @@ def del_value(hash_table, key):
 
 
 def load_factor(hash_table):
-    size, capacity = hash_table
-    return size / len(capacity)
+    size, buckets = hash_table
+    actual_size = sum(len(bucket) for bucket in buckets if bucket)
+    return actual_size / len(buckets)
 
-
-def main():
-    hash_table = init_hash_table()
-    while True:
-        print('1)Добавить ключ-значение')
-        print("2)Удалить значение")
-        print("3)Получить значение")
-        print("4)Коэффициент заполнения")
-        print("5)Вывести таблицу")
-        print("6)Выход")
-        inp = input("Ваш выбор: ")
-        if inp == str(1):
-            while True:
-                key = input("Ключ: ")
-                set_value(hash_table, key, input("Значение: "))
-                if key == 'end':
-                    del_value(hash_table, "end")
-                    break
-        elif inp == str(2):
-            while True:
-                key = input("Введите ключ: ")
-                del_value(hash_table, key)
-                if key == 'end':
-                    break
-        elif inp == str(3):
-            while True:
-                key = input("Введите ключ: ")
-                print(get_value(hash_table, key))
-                if key == 'end':
-                    break
-        elif inp == str(4):
-            print(load_factor(hash_table))
-        elif inp == str(5):
-            print(hash_table[1])
-        elif inp == str(6):
-            break
-
-
-main()
