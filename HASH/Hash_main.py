@@ -33,7 +33,7 @@ def main():
         elif inp == str(4):
             print(load_factor(hash_table))
         elif inp == str(5):
-            print(hash_table[1])
+            print(hash_table)
         elif inp == str(6):
             break
 
