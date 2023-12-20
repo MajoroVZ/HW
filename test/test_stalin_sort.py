@@ -8,8 +8,9 @@ from HW.HW8.stalin_sort import stalin_sort
     ([5, 4, 3, 2, 1], [5]),
     ([], []),
     ([1], [1]),
-    ([1, 1, 1, 1, 1], [1]),
+    ([1, 1, 1, 1, 1], [1, 1, 1, 1, 1]),
     ([10, 5, 8, 12, 3, 15, 6], [10, 12, 15]),
+    ([89, 1, 2, 33, 11, 5, 67, 10, 8], [89])
 ])
 def test_stalin_sort(start_lst, end_lst):
     assert stalin_sort(start_lst) == end_lst
