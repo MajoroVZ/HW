@@ -48,9 +48,8 @@ def test_input_date(input_values, expected_day, expected_month, expected_year):
 def test_format_check_exception(input_values, result):
     d = Date()
     with mock.patch.object(builtins, 'input', lambda _: input_values):
-        with pytest.raises(ValueError) as ex:
+        with pytest.raises(ValueError, match='Неверный формат даты!') as ex:
             d.input_date()
-    assert ex.value.args[0] == result
 
 @pytest.mark.parametrize(
     "input_values, expected_day, expected_month, expected_year",
@@ -64,4 +63,4 @@ def test_format_check_exception(input_values, result):
 )
 def test_str_(input_values, expected_day, expected_month, expected_year):
     date = Date(expected_year, expected_month, expected_day)
-    assert date.__str__() == input_values
+    assert str(date) == input_values
