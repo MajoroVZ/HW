@@ -57,5 +57,5 @@ class HashTable:
 
     def __str__(self) -> str:
         elements = [item for sublist in self.table for item in sublist if item]
-        str_output = '{' + ', '.join('"{}": "{}"'.format(k, v) for k, v in elements) + '}'
-        return str_output
+        return '{' + ', '.join('"{}": "{}"'.format(k, v) for k, v in elements) + '}'
+        
