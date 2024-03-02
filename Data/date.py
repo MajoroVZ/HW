@@ -11,9 +11,8 @@ class Date:
 
     def input_date(self):
         dates = input("Введите дату в формате День.Месяц.Год: ")
-        self.validate_input(dates)
-        self.day, self.month, self.year = map(int, dates.split("."))
-        return self.validate_date()
+        self.day, self.month, self.year = self.validate_input(dates)
+        self.validate_date()
 
     def validate_date(self):
         if (self.month <= 0 or self.month > 12) or self.day > self.DAYS_IN_MONTH[self.month - 1]:
@@ -23,7 +22,7 @@ class Date:
     def validate_input(dates):
         data = dates.split('.')
         if len(data) == 3 and (data[0].isdigit() and data[1].isdigit() and data[2].isdigit()):
-            return data
+            return map(int, data)
         raise ValueError('Только цифры!')
 
     def __str__(self):
