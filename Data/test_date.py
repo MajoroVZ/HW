@@ -2,6 +2,8 @@ import pytest
 import builtins
 from unittest import mock
 from HW.Data.date import Date
+from HW.Data.date import DateStamp
+import freezegun
 
 
 @pytest.mark.parametrize(
@@ -42,14 +44,14 @@ def test_input_date(input_values, expected_day, expected_month, expected_year):
 @pytest.mark.parametrize("input_values, result",
                          [
                              ('28.28.2025', 'Неверный формат даты!'),
-                             ("29.02.2024", 'Неверный формат даты!')
-
+                             ("29.02.2024", 'Неверный формат даты!'),
                          ])
 def test_format_check_exception(input_values, result):
     d = Date()
     with mock.patch.object(builtins, 'input', lambda _: input_values):
         with pytest.raises(ValueError, match=result) as ex:
             d.input_date()
+
 
 @pytest.mark.parametrize(
     "input_values, expected_day, expected_month, expected_year",
@@ -64,3 +66,24 @@ def test_format_check_exception(input_values, result):
 def test_str_(input_values, expected_day, expected_month, expected_year):
     date = Date(expected_year, expected_month, expected_day)
     assert str(date) == input_values
+
+
+# test class DateStamp
+
+@pytest.mark.parametrize(
+    "input_values, expected_day, expected_month, expected_year",
+    [
+        ('0001-1-1', 1, 1, 1),
+        ("0001-1-1", 1, 1, 1),
+        ("2023-1-2", 2, 1, 2023),
+        ("2022-2-28", 28, 2, 2022),
+
+    ]
+)
+def test_init(input_values, expected_day, expected_month, expected_year):
+    with freezegun.freeze_time(input_values):
+        d1 = DateStamp()
+
+    assert d1.day == expected_day
+    assert d1.month == expected_month
+    assert d1.year == expected_year
