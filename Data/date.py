@@ -10,13 +10,21 @@ class Date:
         self.day = day
 
     def input_date(self):
-        date = input("Введите дату в формате День.Месяц.Год: ")
-        self.day, self.month, self.year = map(int, date.split("."))
-        return self.validate()
+        dates = input("Введите дату в формате День.Месяц.Год: ")
+        self.validate_input(dates)
+        self.day, self.month, self.year = map(int, dates.split("."))
+        return self.validate_date()
 
-    def validate(self):
+    def validate_date(self):
         if (self.month <= 0 or self.month > 12) or self.day > self.DAYS_IN_MONTH[self.month - 1]:
             raise ValueError('Неверный формат даты!')
+
+    @staticmethod
+    def validate_input(dates):
+        data = dates.split('.')
+        if len(data) == 3 and (data[0].isdigit() and data[1].isdigit() and data[2].isdigit()):
+            return data
+        raise ValueError('Только цифры!')
 
     def __str__(self):
         return f'{self.day}.{self.month}.{self.year}'
@@ -30,5 +38,8 @@ class DateStamp(Date):
     def input_date(self):
         raise NotImplementedError
 
+
 # d1 = DateStamp()
 # print(d1)
+d1 = Date()
+d1.input_date()
