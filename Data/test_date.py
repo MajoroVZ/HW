@@ -154,9 +154,7 @@ def test_sub(d1, m1, y1, d2, m2, y2, d3, m3, y3):
     d1 = Date(d1, m1, y1)
     d2 = Date(d2, m2, y2)
     f = d1 - d2
-    assert f.day == d3
-    assert f.month == m3
-    assert f.year == y3
+    assert f == Date(d3, m3, y3)
 
 
 @pytest.mark.parametrize(
@@ -168,4 +166,9 @@ def test_sub(d1, m1, y1, d2, m2, y2, d3, m3, y3):
     ]
 )
 def test_eq(d1, m1, y1, d2, m2, y2):
-    assert Date(d1, m1, y1) == Date(d2, m2, y2)
+    d1 = Date(d1, m1, y1)
+    d2 = Date(d2, m2, y2)
+    assert d1 == d2
+    d3 = Date()
+    d4 = Date()
+    assert d3 == d4
