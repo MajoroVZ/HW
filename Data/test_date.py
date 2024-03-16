@@ -150,7 +150,6 @@ def test_add(d1, m1, y1, d2, m2, y2, d3, m3, y3):
         (1, 4, 2000, 1, 1, 1000, 29, 2, 1000),
     ]
 )
-
 def test_sub(d1, m1, y1, d2, m2, y2, d3, m3, y3):
     d1 = Date(d1, m1, y1)
     d2 = Date(d2, m2, y2)
@@ -158,3 +157,15 @@ def test_sub(d1, m1, y1, d2, m2, y2, d3, m3, y3):
     assert f.day == d3
     assert f.month == m3
     assert f.year == y3
+
+
+@pytest.mark.parametrize(
+    ('d1,m1,y1,d2,m2,y2'),
+    [
+        (1, 1, 1, 1, 1, 1),
+        (2, 2, 2, 2, 2, 2),
+        (10, 3, 10, 10, 3, 10),
+    ]
+)
+def test_eq(d1, m1, y1, d2, m2, y2):
+    assert Date(d1, m1, y1) == Date(d2, m2, y2)

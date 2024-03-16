@@ -69,6 +69,9 @@ class Date:
 
         return self.__class__(day, month, year)
 
+    def __eq__(self, other):
+        return self.day == other.day and self.month == other.month and self.year == other.year
+
 
 class DateStamp(Date):
     def __init__(self):
@@ -85,8 +88,7 @@ class DateValidationError(Exception):
         self.code = code
 
 
-if __name__ == '__main__':
-    d1 = Date(31, 1, 1012)
-    d2 = Date(31, 1, 1012)
-    print(d1 + d2)
-    print(d1 - d2)
+if __name__ == "__main__":
+    d1 = Date(10, 10, 2024)
+    d2 = Date(10, 10, 2024)
+    print(d2 == d1)
